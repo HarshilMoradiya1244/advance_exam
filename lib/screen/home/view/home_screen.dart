@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: MediaQuery.sizeOf(context).width,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                             color: Colors.blue
+                             color: colors[index],
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -111,7 +111,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
     floatingActionButton: FloatingActionButton.extended(
-    onPressed: () {},
+    onPressed: () {
+      providerw!.changePage(2);
+    },
       backgroundColor: Colors.green,
       label: const Text("Next Page"),
       icon: const Icon(Icons.arrow_forward_ios),

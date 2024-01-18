@@ -5,12 +5,17 @@ import 'package:flutter/material.dart';
 class HomeProvider with ChangeNotifier{
 
   QuotesModel? quotesModel;
+  int selectedPage =1;
 
   Future<void> getData() async {
     ApiHelper apiHelper = ApiHelper();
-    QuotesModel? data = await apiHelper.quotesApi();
+    QuotesModel? data = await apiHelper.quotesApi(selectedPage);
     quotesModel = data;
     notifyListeners();
   }
 
+  void changePage(int changePage){
+    selectedPage = changePage;
+    notifyListeners();
+  }
 }
