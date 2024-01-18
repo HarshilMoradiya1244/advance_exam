@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: Image.asset("asset/images/Quotes.png"),
+          child: Image.asset("assets/images/quotes.png",height: 100,),
         ),
       ),
     );
