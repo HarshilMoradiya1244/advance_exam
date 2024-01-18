@@ -16,7 +16,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     context.read<HomeProvider>().getData();
   }
@@ -44,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         body: providerw!.quotesModel == null
-            ? const Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator(),)
             : Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: ListView.builder(
@@ -110,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
               ),
-    floatingActionButton: FloatingActionButton.extended(
+            floatingActionButton: FloatingActionButton.extended(
     onPressed: () {
     },
       backgroundColor: Colors.green,

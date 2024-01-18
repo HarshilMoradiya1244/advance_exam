@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 3),(){
+    Future.delayed(const Duration(seconds: 3),(){
     Navigator.pushReplacementNamed(context, 'home')  ;
     });
   }
@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: Image.asset("assets/images/quotes.png",height: 100,),
+          child: Image.asset("assets/images/quotes.png",height: 130,),
         ),
       ),
     );
