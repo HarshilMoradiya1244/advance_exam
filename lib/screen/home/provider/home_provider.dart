@@ -16,6 +16,13 @@ class HomeProvider with ChangeNotifier{
 
   void changePage(int changePage){
     selectedPage = changePage;
+
+    notifyListeners();
+  }
+
+  void changeIndex(int i){
+    selectedPage = i;
+    i++;
     notifyListeners();
   }
 }
